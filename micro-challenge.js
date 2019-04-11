@@ -18,9 +18,11 @@ console.log('');
 console.log('Second - 110 - Conditional: ');
 
 function compareNumbers(firstNum, secondNum){
-  if (parseFloat(firstNum > secondNum)){
+  if (isNaN(firstNum) || isNaN(secondNum)) {
+    return 'One or both of these is not a number!';
+  } else if (firstNum > secondNum){
     return 'The first number is bigger!';
-  } else if (parseFloat(secondNum > firstNum)){
+  } else if (secondNum > firstNum){
     return 'The second number is bigger!';
   } else {
     return 'The numbers are the same!';
@@ -33,8 +35,10 @@ console.log(`Should say second is bigger: ${compareNumbers(1.5, 4.5)}`);
 console.log(`Should say first is bigger: ${compareNumbers(2.5, 2)}`);
 console.log(`Should say second num is bigger: ${compareNumbers('4','7')}`);
 console.log(`Should say NaN: ${compareNumbers('apple', 'orange')}`);
+console.log(`Should say NaN: ${compareNumbers('pickle', 5)}`);
 
-/*
+
+
 // 120 - Arrays
 console.log('');
 console.log('Third - 120 - Arrays: ');
@@ -48,7 +52,12 @@ function firstAndLastSum(myArray){
 
 console.log('In firstAndLastSum: ', firstAndLastSum([1, 2, 3, 4, 5]));
 console.log('In firstAndLastSum: ', firstAndLastSum([6, 7, 8, 9, 10, 11, 12]));
+console.log();
+console.log();
+console.log();
 
+
+/*
 // 130 - Loops, Arrays, Concatenation
 console.log('');
 console.log('Fourth - 130 - Loops, Arrays, and Concatenation: ');
@@ -60,6 +69,7 @@ function selectedWords(array, number){
 
 console.log('In selectedWords: ', selectedWords(["ASDF", "BLAH", "Oh!", "Hi", "There!"], 3));
 console.log('In selectedWords: ', selectedWords(["ASDF", "BLAH", "Oh!", "Hi", "There!"], 2));
+
 
 // 140 - Loops and Two-Dimensional Arrays
 console.log('');
