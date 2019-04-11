@@ -18,19 +18,21 @@ console.log('');
 console.log('Second - 110 - Conditional: ');
 
 function compareNumbers(firstNum, secondNum){
-  if (firstNum > secondNum){
+  if (parseFloat(firstNum > secondNum)){
     return 'The first number is bigger!';
-  } else if (secondNum > firstNum){
+  } else if (parseFloat(secondNum > firstNum)){
     return 'The second number is bigger!';
   } else {
     return 'The numbers are the same!';
   }
 } // end compareNumbers
 
-console.log('In compareNumbers: ', compareNumbers(3, 2));
-console.log('In compareNumbers: ', compareNumbers(2, 7));
-console.log('In compareNumbers: ', compareNumbers(7, 7));
-console.log(`Testing with strings: ${'apple', 'orange'}`);
+console.log(`Should say first is bigger: ${compareNumbers(7,3)}`);
+console.log(`Should say first is bigger: ${compareNumbers(-5,-9)}`);
+console.log(`Should say second is bigger: ${compareNumbers(1.5, 4.5)}`);
+console.log(`Should say first is bigger: ${compareNumbers(2.5, 2)}`);
+console.log(`Should say second num is bigger: ${compareNumbers('4','7')}`);
+console.log(`Should say NaN: ${compareNumbers('apple', 'orange')}`);
 
 /*
 // 120 - Arrays
